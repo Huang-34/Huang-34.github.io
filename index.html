@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页 | 黄韵锦</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f0f7fa;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .avatar-wrapper { text-align: center; margin-bottom: 30px; }
+        .avatar {
+            width: 120px; height: 120px; margin: 0 auto;
+            border-radius: 50%; overflow: hidden;
+            border: 3px solid #3498db;
+        }
+        .avatar-img { width: 100%; height: 100%; object-fit: cover; }
+        .title-wrapper { text-align: center; margin-bottom: 15px; }
+        h1 { font-size: 2.5rem; color: #2c3e50; margin-bottom: 5px; font-weight: 500; }
+        .subtitle { 
+            text-align: center; 
+            color: #3498db; 
+            font-size: 1rem; 
+            margin-bottom: 30px;
+            background-color: #ebf5ff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+        }
+        .intro-card {
+            background-color: #f8fafc;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+            border-radius: 8px;
+        }
+        .intro-text { color: #34495e; text-align: center; font-size: 1.1rem; }
+        .nav-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        .nav-card {
+            background-color: #f8fafc;
+            padding: 25px 15px;
+            text-align: center;
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+        }
+        .card-icon {
+            width: 50px; height: 50px; margin: 0 auto 12px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .card-icon i { font-size: 22px; color: white; }
+        .nav-card h3 { font-size: 1.2rem; margin-bottom: 5px; color: #2c3e50; }
+        .nav-card p { font-size: 0.9rem; color: #7f8c8d; margin-bottom: 12px; }
+        .card-link { color: #3498db; font-size: 0.9rem; font-weight: 500; }
+        .contact-info { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #e1e8ed; }
+        .email-display {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: #2c3e50; font-size: 0.95rem;
+            padding: 10px 25px; background-color: #f8fafc;
+            border: 1px solid #3498db;
+            border-radius: 40px;
+        }
+        .email-display i { color: #3498db; }
+        @media (max-width: 600px) {
+            .nav-cards { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="avatar-wrapper">
+            <div class="avatar">
+                <img src="images/avatar.jpg" alt="头像" class="avatar-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:#3498db;color:white;font-size:48px>黄</div>'">
+            </div>
+        </div>
+        <div class="title-wrapper">
+            <h1>黄韵锦</h1>
+        </div>
+        <p class="subtitle">✨ 热爱交流的探索者 | 数模协会成员</p>
+        <div class="intro-card">
+            <p class="intro-text">大家好！我是数字媒体技术专业2025级的学生。我相信每一次思想的碰撞都能擦出新的火花。</p>
+        </div>
+        <div class="nav-cards">
+            <div class="nav-card" onclick="location.href='about.html'">
+                <div class="card-icon"><i class="fas fa-user"></i></div>
+                <h3>关于我</h3>
+                <p>背景、兴趣与方向</p>
+                <span class="card-link">了解更多 →</span>
+            </div>
+            <div class="nav-card" onclick="location.href='skills.html'">
+                <div class="card-icon"><i class="fas fa-cube"></i></div>
+                <h3>学海拾贝</h3>
+                <p>编程·数学·工具</p>
+                <span class="card-link">探索 →</span>
+            </div>
+            <div class="nav-card" onclick="location.href='thinking.html'">
+                <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>我的思考</h3>
+                <p>为什么要加入讨论组</p>
+                <span class="card-link">了解更多 →</span>
+            </div>
+        </div>
+        <div class="contact-info">
+            <div class="email-display">
+                <i class="fas fa-envelope"></i>
+                <span>553468495@qq.com</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

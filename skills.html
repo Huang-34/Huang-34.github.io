@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的思考 | 黄韵锦</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f0f7fa;
+            padding: 20px;
+        }
+        .container { max-width: 700px; margin: 0 auto; }
+        .back-button {
+            display: inline-block; margin-bottom: 20px;
+            padding: 8px 20px; background-color: #ffffff;
+            border: 1px solid #3498db; border-radius: 30px;
+            text-decoration: none; color: #2c3e50;
+        }
+        .back-button i { color: #3498db; margin-right: 5px; }
+        .content-card {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h1 { 
+            font-size: 2rem; 
+            color: #2c3e50; 
+            margin-bottom: 25px; 
+            padding-bottom: 12px; 
+            border-bottom: 3px solid #3498db;
+        }
+        .section { margin-bottom: 30px; }
+        .section h2 { 
+            font-size: 1.3rem; 
+            margin-bottom: 12px; 
+            color: #3498db;
+            border-left: 4px solid #3498db; 
+            padding-left: 12px; 
+        }
+        .section p { color: #34495e; margin-bottom: 10px; line-height: 1.8; }
+        .quote-card {
+            background-color: #f8fafc;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid #e1e8ed;
+            border-radius: 12px;
+            border-left: 4px solid #3498db;
+        }
+        .quote-card i { color: #b0c4de; margin-bottom: 8px; display: block; }
+        .quote-card p { font-style: italic; color: #34495e; font-size: 1.1rem; }
+        .styled-list { list-style: none; }
+        .styled-list li { 
+            padding: 6px 0 6px 30px; 
+            position: relative; 
+            color: #34495e;
+        }
+        .styled-list li::before { 
+            content: "•"; 
+            position: absolute; 
+            left: 16px; 
+            color: #3498db; 
+            font-size: 1.2rem;
+        }
+        .topic-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .topic-card { 
+            background-color: #f8fafc; 
+            padding: 20px; 
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+            border-top: 4px solid #3498db;
+        }
+        .topic-card h4 { margin-bottom: 8px; color: #2c3e50; font-size: 1.1rem; }
+        .topic-card p { color: #7f8c8d; font-size: 0.9rem; line-height: 1.6; }
+        .reading-item { 
+            background-color: #f8fafc; 
+            padding: 20px; 
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        .reading-item strong { color: #2c3e50; display: block; margin-bottom: 8px; font-size: 1.1rem; }
+        .reading-item p { color: #7f8c8d; margin-top: 8px; line-height: 1.7; }
+        @media (max-width: 600px) {
+            .topic-cards { grid-template-columns: 1fr; }
+            h1 { font-size: 1.6rem; }
+            .content-card { padding: 20px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> 返回主页</a>
+        <div class="content-card">
+            <h1>💭 我的思考</h1>
+            
+            <div class="quote-card">
+                <i class="fas fa-quote-left"></i>
+                <p>加入讨论组不仅仅是为了学习，更是为了在交流中重新认识自己和这个世界。</p>
+            </div>
+
+            <div class="section">
+                <h2>🎯 为什么想加入讨论组？</h2>
+                <p>讨论组提供了一个可以随时抛出问题、听听不同视角的地方。哪怕只是听别人讨论，也能打开思路。希望能在这个集体里，和大家一起进步。</p>
+            </div>
+
+            <div class="section">
+                <h2>🤝 我能带来什么？</h2>
+                <ul class="styled-list">
+                    <li>跨学科的视角（数字媒体技术背景）</li>
+                    <li>积极参与的态度（乐于倾听也勇于表达）</li>
+                    <li>持续学习的精神（愿意投入时间准备每一次讨论）</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📚 最近参与的项目</h2>
+                <div class="topic-cards">
+                    <div class="topic-card">
+                        <h4>项目一</h4>
+                        <p>为协会网页开发智能问答机器人，通过对网页内容的理解，帮助用户解决问题。</p>
+                    </div>
+                    <div class="topic-card">
+                        <h4>项目二</h4>
+                        <p>基于LangChain与GraphRAG的可视化分析平台，打造可对话的智能数据助手。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📖 最近在读</h2>
+                <div class="reading-item">
+                    <strong>《理想国》 - 柏拉图</strong>
+                    <p>《理想国》是西方哲学的奠基之作，被誉为“两千余年来为西方知识界常备之书”。全书以对话形式探讨“正义是什么”“真善美之间如何取舍”“如何构建理想国家”等永恒命题。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
