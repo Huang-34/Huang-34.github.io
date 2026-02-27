@@ -10,59 +10,127 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2c3e50;
-            background-color: #f0f7fa;
+            background-color: #f5f0ff;  /* 浅紫色背景 */
             padding: 20px;
         }
         .container { max-width: 700px; margin: 0 auto; }
         .back-button {
             display: inline-block; margin-bottom: 20px;
             padding: 8px 20px; background-color: #ffffff;
-            border: 1px solid #3498db; border-radius: 30px;
+            border: 1px solid #9b59b6; border-radius: 30px;
             text-decoration: none; color: #2c3e50;
+            font-size: 0.95rem;
         }
-        .back-button i { color: #3498db; margin-right: 5px; }
+        .back-button i { color: #9b59b6; margin-right: 5px; }
         .content-card {
             background-color: #ffffff;
             padding: 35px;
             border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(155, 89, 182, 0.1);
         }
         h1 { 
-            font-size: 2rem; 
+            font-size: 2.2rem; 
             color: #2c3e50; 
             margin-bottom: 25px; 
-            padding-bottom: 12px; 
-            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px; 
+            border-bottom: 3px solid #9b59b6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .section { margin-bottom: 30px; }
+        h1 i { color: #9b59b6; }
+        
+        /* 引言卡片 - 紫色 */
+        .quote-card {
+            background: linear-gradient(135deg, #f5f0ff 0%, #ffffff 100%);
+            padding: 30px;
+            margin-bottom: 35px;
+            border: 1px solid #e8d5ff;
+            border-radius: 16px;
+            border-left: 6px solid #9b59b6;
+            box-shadow: 0 4px 12px rgba(155, 89, 182, 0.08);
+        }
+        .quote-card i { 
+            color: #9b59b6; 
+            font-size: 1.5rem;
+            margin-bottom: 15px; 
+            display: block; 
+            opacity: 0.5;
+        }
+        .quote-card p { 
+            font-style: italic; 
+            color: #2c3e50; 
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+        
+        /* 章节样式 - 紫色 */
+        .section { 
+            margin-bottom: 35px; 
+            background-color: #faf5ff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e8d5ff;
+        }
         .section h2 { 
-            font-size: 1.3rem; 
-            margin-bottom: 12px; 
-            color: #3498db;
-            border-left: 4px solid #3498db; 
-            padding-left: 12px; 
+            font-size: 1.4rem; 
+            margin-bottom: 15px; 
+            color: #9b59b6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #e8d5ff;
+            padding-bottom: 10px;
         }
+        .section h2 i { color: #9b59b6; }
         .section p { 
-            margin-bottom: 6px; 
-            color: #34495e;
+            color: #34495e; 
+            margin-bottom: 10px; 
+            line-height: 1.8;
+            font-size: 1rem;
             padding-left: 16px;
         }
+        
+        /* 列表样式 - 紫色 */
         .styled-list { list-style: none; }
         .styled-list li { 
-            padding: 6px 0 6px 30px; 
+            padding: 10px 0 10px 30px; 
             position: relative; 
             color: #34495e;
+            border-bottom: 1px dashed #e8d5ff;
         }
+        .styled-list li:last-child { border-bottom: none; }
         .styled-list li::before { 
-            content: "•"; 
+            content: "→"; 
             position: absolute; 
-            left: 16px; 
-            color: #3498db; 
-            font-size: 1.2rem;
+            left: 0; 
+            color: #9b59b6; 
+            font-weight: bold;
+            font-size: 1.1rem;
         }
+        
+        /* 标签样式 - 紫色 */
+        .interest-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+            padding-left: 16px;
+        }
+        .interest-tag {
+            background-color: #f5f0ff;
+            color: #9b59b6;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: none;
+        }
+        
         @media (max-width: 600px) {
-            h1 { font-size: 1.6rem; }
+            h1 { font-size: 1.8rem; }
             .content-card { padding: 20px; }
+            .section { padding: 20px; }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -71,24 +139,46 @@
     <div class="container">
         <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> 返回主页</a>
         <div class="content-card">
-            <h1>📋 关于我</h1>
-            <div class="section">
-                <h2>🎓 教育背景</h2>
-                <p>学校：安徽大学</p>
-                <p>专业：数字媒体技术</p>
-                <p>年级：2025级</p>
-                <p>主修课程：程序设计基础、高等数学、线性代数、数字图像处理</p>
+            <h1><i class="fas fa-user"></i> 关于我</h1>
+            
+            <!-- 引言卡片 -->
+            <div class="quote-card">
+                <i class="fas fa-quote-right"></i>
+                <p>"用数字技术讲述故事，用跨界思维探索可能。"</p>
             </div>
+
+            <!-- 教育背景 -->
             <div class="section">
-                <h2>🔍 研究方向</h2>
-                <p>目前对智能体特别感兴趣，正在探索相关方向。</p>
+                <h2><i class="fas fa-graduation-cap"></i> 教育背景</h2>
+                <p><strong>学校：</strong>安徽大学</p>
+                <p><strong>专业：</strong>数字媒体技术</p>
+                <p><strong>年级：</strong>2025级</p>
+                <p><strong>主修课程：</strong>程序设计基础、高等数学、线性代数、数字图像处理</p>
+                <div class="interest-tags">
+                    <span class="interest-tag"># 技术</span>
+                    <span class="interest-tag"># 艺术</span>
+                    <span class="interest-tag"># 设计</span>
+                </div>
             </div>
+
+            <!-- 研究方向 -->
             <div class="section">
-                <h2>🌟 个人特质</h2>
+                <h2><i class="fas fa-search"></i> 研究方向</h2>
+                <p>目前对智能体特别感兴趣，正在探索AI与数字媒体融合的相关方向。希望通过技术创新，为内容创作带来更多可能性。</p>
+                <div class="interest-tags">
+                    <span class="interest-tag"># 智能体</span>
+                    <span class="interest-tag"># AI</span>
+                    <span class="interest-tag"># 人机交互</span>
+                </div>
+            </div>
+
+            <!-- 个人特质 -->
+            <div class="section">
+                <h2><i class="fas fa-star"></i> 个人特质</h2>
                 <ul class="styled-list">
-                    <li>热爱学术交流，喜欢在讨论中获得新视角</li>
-                    <li>善于倾听与表达，能够清晰地组织观点</li>
-                    <li>保持好奇心，对跨学科话题有浓厚兴趣</li>
+                    <li><strong>热爱学术交流</strong> — 喜欢在讨论中获得新视角，善于倾听不同观点</li>
+                    <li><strong>善于表达沟通</strong> — 能够清晰地组织观点，用简洁的方式传达复杂想法</li>
+                    <li><strong>保持好奇心</strong> — 对跨学科话题有浓厚兴趣，乐于探索未知领域</li>
                 </ul>
             </div>
         </div>
