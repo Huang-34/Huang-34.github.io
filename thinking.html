@@ -10,48 +10,48 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2c3e50;
-            background-color: #f0f7fa;
+            background-color: #fff5f0;  /* 暖色背景 */
             padding: 20px;
         }
         .container { max-width: 700px; margin: 0 auto; }
         .back-button {
             display: inline-block; margin-bottom: 20px;
             padding: 8px 20px; background-color: #ffffff;
-            border: 1px solid #3498db; border-radius: 30px;
+            border: 1px solid #e67e22; border-radius: 30px;
             text-decoration: none; color: #2c3e50;
             font-size: 0.95rem;
         }
-        .back-button i { color: #3498db; margin-right: 5px; }
+        .back-button i { color: #e67e22; margin-right: 5px; }
         .content-card {
             background-color: #ffffff;
             padding: 35px;
             border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(230, 126, 34, 0.1);
         }
         h1 { 
             font-size: 2.2rem; 
             color: #2c3e50; 
             margin-bottom: 25px; 
             padding-bottom: 15px; 
-            border-bottom: 3px solid #3498db;
+            border-bottom: 3px solid #e67e22;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        h1 i { color: #3498db; }
+        h1 i { color: #e67e22; }
         
-        /* 引言卡片 */
+        /* 引言卡片 - 暖色调 */
         .quote-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #fef5e7 0%, #ffffff 100%);
             padding: 30px;
             margin-bottom: 35px;
-            border: 1px solid #e1e8ed;
+            border: 1px solid #ffe5d0;
             border-radius: 16px;
-            border-left: 6px solid #3498db;
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
+            border-left: 6px solid #e67e22;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.08);
         }
         .quote-card i { 
-            color: #3498db; 
+            color: #e67e22; 
             font-size: 1.5rem;
             margin-bottom: 15px; 
             display: block; 
@@ -65,25 +65,25 @@
             font-weight: 400;
         }
         
-        /* 章节样式 */
+        /* 章节样式 - 暖色 */
         .section { 
             margin-bottom: 35px; 
-            background-color: #f8fafc;
+            background-color: #fef9f4;
             padding: 25px;
             border-radius: 12px;
-            border: 1px solid #e1e8ed;
+            border: 1px solid #ffe5d0;
         }
         .section h2 { 
             font-size: 1.4rem; 
             margin-bottom: 15px; 
-            color: #3498db;
+            color: #e67e22;
             display: flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 2px solid #e1e8ed;
+            border-bottom: 2px solid #ffe5d0;
             padding-bottom: 10px;
         }
-        .section h2 i { color: #3498db; }
+        .section h2 i { color: #e67e22; }
         .section p { 
             color: #34495e; 
             margin-bottom: 10px; 
@@ -91,25 +91,25 @@
             font-size: 1rem;
         }
         
-        /* 列表样式 */
+        /* 列表样式 - 暖色 */
         .styled-list { list-style: none; }
         .styled-list li { 
             padding: 10px 0 10px 30px; 
             position: relative; 
             color: #34495e;
-            border-bottom: 1px dashed #e1e8ed;
+            border-bottom: 1px dashed #ffe5d0;
         }
         .styled-list li:last-child { border-bottom: none; }
         .styled-list li::before { 
             content: "→"; 
             position: absolute; 
             left: 0; 
-            color: #3498db; 
+            color: #e67e22; 
             font-weight: bold;
             font-size: 1.1rem;
         }
         
-        /* 项目卡片网格 */
+        /* 项目卡片网格 - 暖色 */
         .topic-cards { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
@@ -119,15 +119,10 @@
         .topic-card { 
             background-color: #ffffff; 
             padding: 25px; 
-            border: 1px solid #e1e8ed;
+            border: 1px solid #ffe5d0;
             border-radius: 12px;
-            border-top: 5px solid #3498db;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
-            transition: all 0.2s ease;
-        }
-        .topic-card:hover { 
-            box-shadow: 0 8px 16px rgba(52, 152, 219, 0.1);
-            border-color: #3498db;
+            border-top: 5px solid #e67e22;
+            box-shadow: 0 4px 8px rgba(230, 126, 34, 0.05);
         }
         .topic-card h4 { 
             margin-bottom: 12px; 
@@ -137,7 +132,7 @@
             align-items: center;
             gap: 8px;
         }
-        .topic-card h4 i { color: #3498db; font-size: 1.1rem; }
+        .topic-card h4 i { color: #e67e22; font-size: 1.1rem; }
         .topic-card p { 
             color: #7f8c8d; 
             font-size: 0.95rem; 
@@ -145,13 +140,29 @@
             margin: 0;
         }
         
-        /* 阅读卡片 */
+        /* 标签样式 - 暖色 */
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        .project-tag {
+            background-color: #fef5e7;
+            color: #e67e22;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: none;
+        }
+        
+        /* 阅读卡片 - 暖色 */
         .reading-item { 
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #fef5e7 100%);
             padding: 25px; 
-            border: 1px solid #e1e8ed;
+            border: 1px solid #ffe5d0;
             border-radius: 12px;
-            border-left: 6px solid #3498db;
+            border-left: 6px solid #e67e22;
             margin-top: 15px;
         }
         .reading-item strong { 
@@ -160,28 +171,12 @@
             margin-bottom: 10px; 
             font-size: 1.2rem;
         }
-        .reading-item strong i { color: #3498db; margin-right: 8px; }
+        .reading-item strong i { color: #e67e22; margin-right: 8px; }
         .reading-item p { 
             color: #7f8c8d; 
             line-height: 1.8; 
             font-size: 0.95rem;
             margin: 0;
-        }
-        
-        /* 标签样式 */
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        .project-tag {
-            background-color: #ebf5ff;
-            color: #3498db;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            border: none;
         }
         
         @media (max-width: 600px) {
@@ -201,20 +196,19 @@
         <div class="content-card">
             <h1><i class="fas fa-lightbulb"></i> 我的思考</h1>
             
-            <!-- 引言卡片 - 彩色 -->
+            <!-- 引言卡片 -->
             <div class="quote-card">
                 <i class="fas fa-quote-right"></i>
                 <p>"加入讨论组不仅仅是为了学习，更是为了在交流中重新认识自己和这个世界。"</p>
             </div>
 
-            <!-- 动机部分 - 彩色 -->
+            <!-- 动机部分 -->
             <div class="section">
                 <h2><i class="fas fa-bullseye"></i> 为什么想加入讨论组？</h2>
-                <p>讨论组提供了一个可以随时抛出问题、听听不同视角的地方。哪怕只是听别人讨论，也能打开思路。希望能在这个集体里，和大家一起进步。</p>
-                <p>我相信通过思想的碰撞，能够拓宽视野，发现新的研究兴趣点。</p>
+                <p>讨论组提供了一个可以随时抛出问题、听听不同视角的地方。哪怕只是听别人讨论，也能打开思路。希望能在这个集体里，和大家一起进步。我相信通过思想的碰撞，能够拓宽视野，发现新的研究兴趣点。</p>
             </div>
 
-            <!-- 价值部分 - 彩色 -->
+            <!-- 价值部分 -->
             <div class="section">
                 <h2><i class="fas fa-hand-sparkles"></i> 我能带来什么？</h2>
                 <ul class="styled-list">
@@ -224,7 +218,7 @@
                 </ul>
             </div>
 
-            <!-- 项目展示 - 彩色卡片 -->
+            <!-- 项目展示 -->
             <div class="section">
                 <h2><i class="fas fa-code-branch"></i> 最近参与的项目</h2>
                 <div class="topic-cards">
@@ -249,7 +243,7 @@
                 </div>
             </div>
 
-            <!-- 阅读分享 - 彩色 -->
+            <!-- 阅读分享 -->
             <div class="section">
                 <h2><i class="fas fa-book-open"></i> 最近在读</h2>
                 <div class="reading-item">
