@@ -10,109 +10,133 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2c3e50;
-            background-color: #f0f7fa;
+            background-color: #f0f9f0;  /* 浅绿色背景 */
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
         .back-button {
             display: inline-block; margin-bottom: 20px;
             padding: 8px 20px; background-color: #ffffff;
-            border: 1px solid #3498db; border-radius: 30px;
+            border: 1px solid #27ae60; border-radius: 30px;
             text-decoration: none; color: #2c3e50;
+            font-size: 0.95rem;
         }
-        .back-button i { color: #3498db; margin-right: 5px; }
+        .back-button i { color: #27ae60; margin-right: 5px; }
         .content-card {
             background-color: #ffffff;
             padding: 35px;
             border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.1);
         }
-        h1 { font-size: 2rem; color: #2c3e50; margin-bottom: 5px; }
+        h1 { 
+            font-size: 2.2rem; 
+            color: #2c3e50; 
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h1 i { color: #27ae60; }
         .section-subtitle { 
-            color: #3498db; 
+            color: #27ae60; 
             margin-bottom: 30px; 
             padding-bottom: 15px; 
-            border-bottom: 2px solid #e1e8ed;
+            border-bottom: 2px solid #d5e8d5;
             font-weight: 500;
+            margin-left: 40px;
         }
+        
+        /* 分类样式 - 绿色 */
         .category { margin-bottom: 40px; }
         .category-header { 
             display: flex; 
             align-items: center; 
             gap: 10px; 
             margin-bottom: 20px; 
-            background-color: #f8fafc;
+            background-color: #f0f9f0;
             padding: 10px 15px;
             border-radius: 8px;
         }
-        .category-header i { color: #3498db; font-size: 1.3rem; }
+        .category-header i { color: #27ae60; font-size: 1.3rem; }
         .category-header h2 { font-size: 1.3rem; color: #2c3e50; }
+        
+        /* 技能卡片 - 绿色 */
         .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .skill-card { 
-            background-color: #f8fafc; 
+            background-color: #f8fcf8; 
             padding: 20px; 
-            border: 1px solid #e1e8ed;
+            border: 1px solid #d5e8d5;
             border-radius: 10px;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #27ae60;
         }
         .skill-card h3 { font-size: 1.2rem; margin-bottom: 5px; color: #2c3e50; }
-        .skill-level { font-size: 0.85rem; color: #3498db; margin-bottom: 10px; font-weight: 500; }
+        .skill-level { font-size: 0.85rem; color: #27ae60; margin-bottom: 10px; font-weight: 500; }
         .skill-desc { font-size: 0.9rem; color: #7f8c8d; margin-top: 10px; }
         .progress-bar { height: 6px; background-color: #e1e8ed; margin: 10px 0; border-radius: 3px; }
-        .progress { height: 100%; background-color: #3498db; border-radius: 3px; }
+        .progress { height: 100%; background-color: #27ae60; border-radius: 3px; }
+        
+        /* 数学网格 - 绿色 */
         .math-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .math-item { 
-            background-color: #f8fafc; 
+            background-color: #f8fcf8; 
             padding: 20px; 
-            border: 1px solid #e1e8ed;
+            border: 1px solid #d5e8d5;
             border-radius: 10px;
-            border-top: 4px solid #3498db;
+            border-top: 4px solid #27ae60;
         }
         .math-item h3 { font-size: 1.1rem; margin-bottom: 12px; color: #2c3e50; }
         .math-details { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
         .math-tag { 
-            background-color: #ebf5ff; 
+            background-color: #e8f3e8; 
             padding: 4px 10px; 
             border: none;
             border-radius: 20px; 
             font-size: 0.8rem; 
-            color: #3498db; 
+            color: #27ae60; 
         }
         .interest-level i { color: #f1c40f; margin-right: 2px; }
+        
+        /* 工具网格 - 绿色 */
         .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
         .tool-item { 
-            background-color: #f8fafc; 
+            background-color: #f8fcf8; 
             padding: 12px; 
             display: flex; 
             align-items: center; 
             gap: 8px; 
-            border: 1px solid #e1e8ed;
+            border: 1px solid #d5e8d5;
             border-radius: 8px;
         }
-        .tool-icon { color: #3498db; width: 20px; }
+        .tool-icon { color: #27ae60; width: 20px; }
         .tool-item span { color: #2c3e50; font-size: 0.9rem; }
+        
+        /* 学习标签 - 绿色 */
         .learning-grid { display: flex; flex-wrap: wrap; gap: 10px; }
         .learning-tag { 
-            background-color: #ebf5ff; 
+            background-color: #e8f3e8; 
             padding: 6px 16px; 
             border: none;
             border-radius: 25px; 
-            color: #3498db;
+            color: #27ae60;
             font-size: 0.9rem;
         }
+        
+        /* 引用卡片 - 绿色 */
         .quote-card { 
-            background-color: #f8fafc; 
+            background: linear-gradient(135deg, #f0f9f0 0%, #ffffff 100%);
             padding: 25px; 
             margin-top: 30px; 
-            border: 1px solid #e1e8ed;
+            border: 1px solid #d5e8d5;
             border-radius: 12px;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #27ae60;
         }
-        .quote-card i { color: #b0c4de; margin-bottom: 8px; display: block; }
+        .quote-card i { color: #a8d5a8; margin-bottom: 8px; display: block; }
         .quote-card p { color: #34495e; font-style: italic; }
+        
         @media (max-width: 600px) {
             .skills-grid, .math-grid, .tools-grid { grid-template-columns: 1fr; }
             .content-card { padding: 20px; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -121,7 +145,7 @@
     <div class="container">
         <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> 返回主页</a>
         <div class="content-card">
-            <h1>📚 学海拾贝</h1>
+            <h1><i class="fas fa-leaf"></i> 学海拾贝</h1>
             <p class="section-subtitle">大一数字媒体技术专业 · 正在构建的知识体系</p>
             
             <!-- 编程与开发 -->
@@ -130,15 +154,15 @@
                 <div class="skills-grid">
                     <div class="skill-card">
                         <h3>Python</h3>
-                        <div class="skill-level">学习中</div>
+                        <div class="skill-level">学习中 · 65%</div>
                         <div class="progress-bar"><div class="progress" style="width:65%"></div></div>
                         <p class="skill-desc">基础语法、turtle绘图、简单的数据处理</p>
                     </div>
                     <div class="skill-card">
                         <h3>C语言</h3>
-                        <div class="skill-level">学习中</div>
+                        <div class="skill-level">学习中 · 55%</div>
                         <div class="progress-bar"><div class="progress" style="width:55%"></div></div>
-                        <p class="skill-desc">学习中</p>
+                        <p class="skill-desc">指针、数组、基础算法</p>
                     </div>
                 </div>
             </div>
@@ -191,13 +215,14 @@
                 <div class="learning-grid">
                     <span class="learning-tag"># 三维建模入门</span>
                     <span class="learning-tag"># 用户体验设计</span>
+                    <span class="learning-tag"># 交互设计</span>
                 </div>
             </div>
 
             <!-- 学习心得 -->
             <div class="quote-card">
                 <i class="fas fa-quote-left"></i>
-                <p>作为数媒专业的大一学生，我正在努力构建"技术+艺术"的知识体系。虽然每个领域都还在入门阶段，但我享受这种不断探索、不断积累的过程。期待在讨论组中与大家交流学习心得！</p>
+                <p>作为数媒专业的大一学生，我正在努力构建"技术+艺术"的知识体系。每一个新技能都是一颗贝壳，在学海中慢慢拾取、珍藏。</p>
             </div>
         </div>
     </div>
